@@ -10,9 +10,11 @@ keeping in mind that he can travel to only 12 stores a day.
 
 **NOTE :** The distance is calculated using **Haversine Formula** which may vary from the actual distance.
 
-
 """)
+st.write("""
+         
     
+        """)
 Data = st.file_uploader("UPLOAD FILE -  larger files (>1000 rows) will take a few seconds for the algo to run", type={"csv"})
 if Data is not None:
     df = pd.read_csv(Data)
@@ -95,7 +97,9 @@ elif selected_view=='Minimal Route Finder':
                     if min_dist==0.0:
                         return min_index
         return min_index
+    st.write("""
     
+                 """)
     st.header('Enter coordinates of your starting point')    
     lat_input = 13.945281
     latitude = st.text_area("Latitude input", lat_input, height=25)
@@ -140,7 +144,9 @@ elif selected_view=='Minimal Route Finder':
             
     
     
+    st.write("""
     
+                 """)
     st.header('INPUT (Origin Location)')
     st.write("Origin( " +str(latitude) + " , " + str(longitude) +" )")
     
@@ -183,6 +189,8 @@ elif selected_view=='Minimal Route Finder':
                 if df['id'][k] in Id:
                     df['Visited'][k]=1
             st.header("""
+                      
+                      
                      Download The Complete Dataset Below !    
              """)
             st.write("DO NOT make any changes to this file !!")
