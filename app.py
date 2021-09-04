@@ -19,7 +19,7 @@ Data = st.file_uploader("UPLOAD FILE -  larger files (>1000 rows) will take a fe
 if Data is not None:
     df = pd.read_csv(Data)
 else:
-    df=pd.read_csv('shortened - Sheet1 (1).csv')
+    df=pd.read_csv('shortened - Sheet1.csv')
 
 df['Marked']=0
 
